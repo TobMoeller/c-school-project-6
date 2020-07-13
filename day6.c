@@ -2,16 +2,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+double einheitAbfrage(char einheit[]);
+double calculatePorto(double laenge, double breite, double hoehe, double gewicht);
 
 void day6() {
     int caseProgram;
     printf("\n\nWas moechtest du starten? \n"
            "Option (1): Saftladen\n"
+           "Option (2): Aufzug\n"
+           "Option (3): Paket Check\n"
            "Option (0): Exit Program\n\t");
     scanf("%d", &caseProgram);
 
     switch (caseProgram){
         case 1: saftLaden(); day6(); break;
+        case 2: aufzug(); day6(); break;
+        case 3: paketCheck(); day6(); break;
         case 0: printf("\n--- exiting ---"); break;
         default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day6(); break;
     }
@@ -43,7 +49,54 @@ void saftLaden() {
     printf("\nRechnungsbetrag: %.2f", rechnungsBetrag);
 }
 
-float preisBerechnen(float produktMenge, float produktPreis) {
+void aufzug() {
+    int gewicht =0, aufzug=0;
+    float hoehe;
+    char kettensaege[100] = "\nBitte nehmen Sie eine Kettensaege zum zerkleinen und teilen. ";
 
+    printf_s("Geben Sie das Gewicht ein\n");
+    scanf_s("%d", &gewicht);
+    printf_s("Geben Sie die Hoehe ein\n");
+    scanf_s("%f", &hoehe);
+
+    if (gewicht > 500 || hoehe > 2.5) {
+        printf_s("%s", kettensaege);
+    } else if (gewicht<=50 && hoehe<=1.5 ) {
+        printf_s("nimm Aufzug = 123");
+    } else if ( gewicht<=125 && hoehe<=2){
+        printf_s("nimm Aufzug 2 oder 3");
+    } else if ( gewicht<=125 && hoehe<=2.50){
+        printf_s("nimm Aufzug 2 ");
+    } else if ( gewicht<=500 && hoehe<=2) {
+        printf_s( "only elevator 3 biatch!");
+    } else {
+        printf_s("%s", kettensaege);
+    }
 }
 
+void paketCheck() {
+    double laenge = einheitAbfrage("die Laenge");
+    double breite = einheitAbfrage("die Breite");
+    double hoehe = einheitAbfrage("die Hoehe");
+    double gewicht = einheitAbfrage("das Gewicht");
+
+    double porto = calculatePorto(laenge, breite, hoehe, gewicht);
+    if (porto == 0) printf("\nIhr Paket ist zu gross. Kontaktieren Sie eine Spedition.");
+    else printf("\nDie Portkosten fuer Ihr Paket betragen %.2lf Euro.", porto);
+}
+
+double einheitAbfrage(char einheit[]) {
+    double menge;
+    printf("Bitte geben Sie %s ein: ", einheit);
+    scanf("%lf", &menge);
+    return menge;
+}
+
+double calculatePorto(double laenge, double breite, double hoehe, double gewicht) {
+    if (laenge > 120 || breite > 60 || hoehe > 60 || gewicht > 31.5) return 0;
+    else if (gewicht > 15) return 11.99;
+    else if (gewicht > 7) return 6.99;
+    else if (gewicht > 3 || laenge > 60 || breite > 30 || hoehe > 30) return 5.79;
+    else if (gewicht > 1.5 || laenge > 30) return 4.79;
+    else return 3.49;
+}
