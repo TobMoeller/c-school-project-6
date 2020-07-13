@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1594571399 source:c:\users\tmide\documents\dev\c-school-project-6\test.c
+	<stdio.h>
+	<stdlib.h>
+
+1594633533 source:c:\users\tmide\documents\dev\c-school-project-6\main.c
+	<stdio.h>
+	<stdlib.h>
+
