@@ -82,6 +82,7 @@ void paketCheck() {
 
     double porto = calculatePorto(laenge, breite, hoehe, gewicht);
     if (porto == 0) printf("\nIhr Paket ist zu gross. Kontaktieren Sie eine Spedition.");
+    else if (porto == 1) printf("\nAuf Ihr Paket passt kein Label, bitte waehlen Sie einen groesseren Karton.");
     else printf("\nDie Portkosten fuer Ihr Paket betragen %.2lf Euro.", porto);
 }
 
@@ -98,5 +99,6 @@ double calculatePorto(double laenge, double breite, double hoehe, double gewicht
     else if (gewicht > 7) return 6.99;
     else if (gewicht > 3 || laenge > 60 || breite > 30 || hoehe > 30) return 5.79;
     else if (gewicht > 1.5 || laenge > 30) return 4.79;
-    else return 3.49;
+    else if (laenge > 15 || breite > 10) return 3.49;
+    else return 1;
 }
