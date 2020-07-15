@@ -20,7 +20,14 @@ void switchCase() {
         case 1: day6(); switchCase(); break;
         case 2: day7(); switchCase(); break;
         case 3: day8(); switchCase(); break;
+        case 9: test(); switchCase(); break;
         case 0: printf("\n--- exiting ---"); break;
         default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); switchCase(); break;
     }
+}
+
+void test() {
+    int i = 7;
+    if (!(4 < i < 6)) printf("false");
+    else printf("true");
 }
