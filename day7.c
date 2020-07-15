@@ -9,7 +9,7 @@ void day7() {
            "Option (3): While Schleife 2\n"
            "Option (4): Spiele Marktanalyse\n"
            "Option (5): Fuss Schleife\n"
-           "Option (0): Exit Program\n\t");
+           "Option (0): Exit Tag 7\n\t");
     scanf("%d", &caseProgram);
 
     switch (caseProgram){
