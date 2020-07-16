@@ -40,6 +40,9 @@
 		<Unit filename="day8.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="day9.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
