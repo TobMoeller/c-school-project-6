@@ -15,6 +15,8 @@ void switchCase() {
            "Option (3): Tag 8\n"
            "Option (4): Tag 9\n"
            "Option (5): Tag 10\n"
+           "Option (6): Tag 11\n"
+           "Option (7): Tag 12\n"
            "Option (0): Exit Program\n\t");
     scanf("%d", &caseProgram);
 
@@ -24,6 +26,7 @@ void switchCase() {
         case 3: day8(); switchCase(); break;
         case 4: day9(); switchCase(); break;
         case 5: day10(); switchCase(); break;
+        case 7: day12(); switchCase(); break;
         case 9: test(); switchCase(); break;
         case 0: printf("\n--- exiting ---"); break;
         default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); switchCase(); break;

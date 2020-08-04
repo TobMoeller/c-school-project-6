@@ -1,0 +1,13 @@
+program VerschachtelteSchleifenFuer_2DimArrays {
+    for (laden = 0; laden < 5; laden++) {
+        for (monat = 0; monat < 12; monat++) {
+            Eingabe: umsatz[laden][monat]
+        }
+    }
+    
+    for (laden = 0; laden < 5; laden++) {
+        for (monat = 0; monat < 12; monat++) {
+            Ausgabe: umsatz[laden][monat]
+        }
+    }
+}
