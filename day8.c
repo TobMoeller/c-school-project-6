@@ -9,7 +9,7 @@ void day8() {
            "Option (4): Berechne Pruefziffer\n"
            "Option (5): Berechne Pruefziffer mit Eingabe\n"
            "Option (6): Berechne Pruefziffer mit String Eingabe\n"
-           "Option (0): Exit Tag 8\n\t");
+           "Option (0): Exit Tag\n\t");
     scanf("%d", &caseProgram);
 
     switch (caseProgram){

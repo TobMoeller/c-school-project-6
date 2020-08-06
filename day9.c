@@ -8,7 +8,7 @@ void day9() {
            "Option (3): Pruefzahl\n"
            "Option (4): String Tests\n"
            "Option (5): Strings zusammenfuegen\n"
-           "Option (0): Exit Tag 8\n\t");
+           "Option (0): Exit Tag\n\t");
     scanf("%d", &caseProgram);
 
     switch (caseProgram){

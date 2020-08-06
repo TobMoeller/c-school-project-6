@@ -18,6 +18,7 @@ void switchCase() {
            "Option (6): Tag 11\n"
            "Option (7): Tag 12\n"
            "Option (8): Tag 13\n"
+           "Option (9): Tag 14\n"
            "Option (0): Exit Program\n\t");
     scanf("%d", &caseProgram);
 
@@ -29,14 +30,8 @@ void switchCase() {
         case 5: day10(); switchCase(); break;
         case 7: day12(); switchCase(); break;
         case 8: day13(); switchCase(); break;
-        case 9: test(); switchCase(); break;
+        case 9: day14(); switchCase(); break;
         case 0: printf("\n--- exiting ---"); break;
         default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); switchCase(); break;
     }
-}
-
-void test() {
-    int i = 7;
-    if (!(4 < i < 6)) printf("false");
-    else printf("true");
 }

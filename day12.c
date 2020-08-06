@@ -6,7 +6,7 @@ void day12() {
     printf("\n\nWas moechtest du starten? \n"
            "Option (1): Tag 12 Mitschrift\n"
            "Option (2): Schulnoten\n"
-           "Option (0): Exit Tag 8\n\t");
+           "Option (0): Exit Tag\n\t");
     scanf("%d", &caseProgram);
 
     switch (caseProgram){

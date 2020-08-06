@@ -8,7 +8,7 @@ void day13() {
            "Option (2): Uebung 1\n"
            "Option (3): Uebung 1, zweite Variante\n"
            "Option (4): Uebung 2\n"
-           "Option (0): Exit Tag 8\n\t");
+           "Option (0): Exit Tag\n\t");
     scanf("%d", &caseProgram);
 
     switch (caseProgram){
